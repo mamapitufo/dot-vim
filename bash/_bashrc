@@ -18,7 +18,7 @@ xterm*|rxvt*|screen*)
     ;;
 esac
 
-PATH=${PATH}:/usr/local/sbin
+PATH=/usr/local/bin:${PATH}:/usr/local/sbin
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -49,6 +49,9 @@ elif [ ${SYSTEM} = "Darwin" ]; then
         . `brew --prefix`/etc/bash_completion
     fi
 
+    HOMEBREW_CASK_OPTS="--appdir=/Applications"
+    export HOMEBREW_CASK_OPTS
+
 fi
 
 if [ -d ~/bin ]; then
@@ -60,4 +63,8 @@ if [ -d ~/.cabal/bin ]; then
 fi
 
 export PATH MANPATH
+
+if [ -f ~/.bashrc_local ]; then
+    source ~/.bashrc_local
+fi
 
