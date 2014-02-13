@@ -2,12 +2,8 @@
 	ui = auto
 
 [core]
-	pager = less -RE
+	pager = less $LESS -FXR
 	excludesfile = ~/.gitexclude
-
-[user]
-	name = Alberto Brealey-Guzman
-	email = alberto.brealey@gmail.com
 
 [github]
 	user = mamapitufo
@@ -34,3 +30,11 @@
 # http://stackoverflow.com/questions/267761/what-does-your-gitconfig-contain
 # for ideas.
 
+[push]
+	default = simple
+
+[branch]
+	autosetuprebase = always
+
+[include]
+	path = .gitconfig_local

@@ -23,7 +23,7 @@ map <Leader>c <plug>NERDCommenterToggle
 
 " NERDTree
 map <Leader>tt :NERDTreeToggle<CR>
-let NERDTreeWinSize=35
+let NERDTreeWinSize=29
 let NERDTreeMinimalUI=1
 
 " rainbow_parentheses
@@ -36,4 +36,11 @@ map <Leader>( :RainbowParenthesesToggle<CR>
 
 " vim-clojure-static plugin
 let g:clojure_align_multiline_strings = 1
+
+" syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_javascript_jshint_conf="~/.jshintrc"
+
+" delimitMate
+let g:delimitMate_expand_cr = 1
 
